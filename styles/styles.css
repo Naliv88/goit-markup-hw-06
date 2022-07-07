@@ -463,12 +463,8 @@ img {
 .footer .container{
     text-align: left;
 }
-.social-footer{
-    display: inline;
-    margin-left: 70px;
-    margin-top: 15px;
-}
-.social-footer .list-title {
+
+.footer .list-title {
     color: var(--color-bg-first);
     text-align: left;
     font-size: 14px;
@@ -478,7 +474,8 @@ img {
 }
 .footer-content{
     display: flex;
-
+    justify-content: space-between;
+    align-items: center;
 }
 .footer .social-media-link {
     display: flex;
@@ -486,7 +483,7 @@ img {
     justify-content: center;
     width: 44px;
     height: 44px;
-    background-color:rgba(255, 255, 255, 0.1);;
+    background-color:rgba(255, 255, 255, 0.1);
     border-radius: 50%;
 
     fill: var(--color-bg-first);
@@ -498,11 +495,7 @@ img {
     background-color: var(--color-accent);
 
 }
-.subscribe {
-    margin-top: 13px;
-    margin-left: 93px;
 
-}
 
 .subscribe-input {
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -533,11 +526,21 @@ img {
     width: 200px;
     height: 50px;
     margin-left: 12px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+}
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+    background-color: #188CE8;
+    cursor: pointer;
 }
 
-.subscribe-btn {
+.send-icon {
     fill: currentColor;
 }
+
+
+
 /* Portfolio */
 
 /* button filter */
@@ -652,6 +655,7 @@ img {
     height: 100%;
 
     background-color: rgba(0, 0, 0, 0.2);
+    
 
     opacity: 1;
     visibility: visible;
@@ -676,8 +680,11 @@ img {
     border-radius: 4px;
     min-width: 528px;
     min-height: 581px;
+
+    padding: 40px;
+
 }
-.module-button{
+.modul-button-close{
     position: absolute;
     top: 8px;
     right: 8px;
@@ -692,10 +699,126 @@ img {
     justify-content: center;
     align-items: center;
 
-
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
 }
-.module-button:hover{
+.modul-button-close:hover, .modul-button-close:focus{
     fill: var(--color-accent);
     cursor: pointer;
+}
+
+.modal-form{
+    display: flex;
+    flex-direction: column;
+
+}
+.modal-form-titel{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    
+    color:var(--color-title);
+    margin-bottom: 12px;
+}
+.modal-form-submit{
+
+    background-color: var(--color-accent);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    
+    display: block;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    border: none;
+    
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 55px;
+
+    color: var(--color-bg-first);
+    text-align: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-submit:hover, .modal-form-submit:focus{
+        background-color: #188CE8;
+        cursor: pointer;
+    }
+.modal-label{
+    display: block;
+   
+}
+.modal-label:not(:last-child){
+    margin-bottom: 10px;
+}
+.modal-form-input{
+    border: none;
+    padding-left: 10px;
+    width: 100%;
+    
+    outline: 0;
+    outline-offset: 0;
+    
+}
+.modal-form-container{
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    min-height: 40px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    padding: 11px 12px;
+    margin-top: 4px;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-container:hover, .modal-form-container:focus{
+    border-color: var(--color-accent);
+    fill: var(--color-accent);
+}
+
+.modal-form-textarea{
+    border: none;
+    width: 100%;
+    
+    outline: 0;
+    outline-offset: 0;
+    resize: none;
+
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+}
+.modal-form-text{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+
+    letter-spacing: 0.01em;
+}
+.modal-form-liecens{
+    margin-top: 20px;
+}
+.modal-form-submit{
+    margin-top: 30px;
+}
+.modal-form-chek{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    
+    letter-spacing: 0.03em;
+}
+.modal-form-cont{
+    color: var(--color-accent);
+}
+.modal-form-liecens{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }

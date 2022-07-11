@@ -391,6 +391,7 @@ img {
     display: flex;
     --items: 6;
     --indent: 25px;
+    
 }
 .clients-list-item{
     border: #AFB1B8 solid 1px;
@@ -415,7 +416,13 @@ img {
 .clients-list-item:focus .client-icon{
     fill: #2196F3;
 }
-
+.clients-list-link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .client-icon{
     
     fill: #AFB1B8;
